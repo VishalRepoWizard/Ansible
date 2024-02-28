@@ -7,5 +7,5 @@
 
     - name: Uninstall Package
       package:
-        name: nginx  # Change to the package you want to uninstall
+      - name: nginx  # Change to the package you want to uninstall
         state: absent
