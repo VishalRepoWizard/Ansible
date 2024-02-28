@@ -1,0 +1,17 @@
+--- 
+  - name: This my Global-Local variable yml
+    hosts: all 
+    become: true 
+    vars: 
+      A:www.google.com
+    tasks:
+      - name: Display global variable
+        debug:
+          msg: "{{A}}"
+
+      - name: Display local variable
+        debug:
+          msg: "{{A}}"
+        vars:
+          A: www.facebook.com
+        
